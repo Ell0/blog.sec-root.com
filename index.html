@@ -28,19 +28,44 @@ Released   : 20100928
                                                         
                             				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://blog.sec-root.com/2013/May/03/hello_world.html">Hello World! (again)</a></h2>
-						<p class="meta"><span class="date">The  </span><span class="posted">By <a href="#">Ell0</a></span><span>&nbsp; | Category : <a href="http://blog.sec-root.com/category/misc.html">misc</a></span></p>
-					<p class="meta">Tags : <span><a href="http://blog.sec-root.com/tag/misc.html">misc</a> / </span>
+						<h2 class="title"><a href="http://blog.sec-root.com/2013/May/21/carel_brute_force.html">Carel: One small step further</a></h2>
+						<p class="meta"><span class="date">The  </span><span class="posted">By <a href="#">Ell0</a></span><span>&nbsp; | Category : <a href="http://blog.sec-root.com/category/tools.html">tools</a></span></p>
+					<p class="meta">Tags : <span><a href="http://blog.sec-root.com/tag/tools.html">tools</a> / </span>
 </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p><code>void main(){
-    printf("Hello World! (again)");
-}</code></p>	
+						 <hr />
+<p><em>DISCLAIMER</em>: This information is too old, but I recently created a GitHub account and I want to use it for the first time, so I have take any ramdom project from my hard disk :-P</p>
+<hr />
+<p>Some time ago one more <i>SCADA</i> system showed its lack of security. Several vulnerabilities in <a href="http://www.carel.com/carelcom/web/eng/catalogo/prodotto_dett.jsp?id_prodotto=91&amp;id_gamma=40" title="Carel PlantVisor Web">Carel PlantVisor</a> were published by people like <a href="http://aluigi.altervista.org/adv/plantvisor_1-adv.txt" title="Luigi Auriemma">Luigi Auriemma</a> and other people, like <a href="http://blog.hispasec.com/laboratorio/391.html" title="Hispasec post">Hispasec</a> guys and myself, enjoyed playing with these <del>first level wargames</del> systems.</p>
+<p>In addition to the vulnerabilities already exposed, I could see (al least) two other attack vectors:</p>
+<ul>
+<li>
+<p>The session ID (SessionID) used to control de authentication its totally predictable and it looks like dependent on the IP of the client. In this way, it would be possible to reach some privileged functions if there is an admin already logged in at the same time and we shared the IP (NAT, etc.) or if the Carel PlantVisor server lie behind a reverse proxy or load balancer.</p>
+</li>
+<li>
+<p>There is a bunch of trivial passwords out there! The application doesn't control the passwords strength. To search this low hanging fruit I developed a <a href="https://github.com/Ell0/carelbf">little python script</a> that search Carel servers in Shodan (You need a Shodan API key) and test weak passwords. Of course, this script was developed to test the security of authorized infrastructures, and it shouldn't be used without permission of the server administrator/owner.</p>
+</li>
+</ul>	
 						<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="_Ell0_">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
-			        			                                                    					<div style="clear: both;">&nbsp;</div>
+			        	
+			                <div class="post">
+			                        <h2 class="title">Other articles</h2>
+			                </div>
+			        			                                    
+                             
+			                <div class="post summary">
+						<h2 class="title"><a href="http://blog.sec-root.com/2013/May/03/hello_world.html">Hello World! (again)</a></h2>
+						<p class="meta"><span class="date">The Fri 03 May 2013</span><span class="posted">By <a href="#">Ell0</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>First post</p>	
+						 <a class="readmore" href="http://blog.sec-root.com/2013/May/03/hello_world.html">Read more …</a>
+						</div>
+					</div>
+		                                                            					<div style="clear: both;">&nbsp;</div>
 				</div>
 								<div id="sidebar">
 					<div id="logo">
@@ -70,12 +95,14 @@ Released   : 20100928
 							<h2>Category</h2>
 							<ul>
 															 <li ><a href="http://blog.sec-root.com/category/misc.html">misc</a></li>
+															 <li ><a href="http://blog.sec-root.com/category/tools.html">tools</a></li>
 														</ul>
 						</li>
 						<li>
 						        <h2>Tags</h2>
 						        <ul>
 						                                                                        <li><a href="http://blog.sec-root.com/tag/misc.html">misc</a></li>
+                                                                                                                        <li><a href="http://blog.sec-root.com/tag/tools.html">tools</a></li>
                                                         						        </ul>
 						</li>
 						
